@@ -1,0 +1,29 @@
+# Archivos de objetos y binarios
+*.o
+*.ko
+*.mod
+*.mod.c
+*.symvers
+*.order
+
+# Directorios generados por compilación
+/build/
+/*.tmp
+.tmp_versions/
+Module.symvers
+modules.order
+
+# Archivos de respaldo
+*~
+*.swp
+*.bak
+
+# Archivos de logs
+*.log
+
+# Archivos creados por editores
+.vscode/
+.idea/
+
+# Archivos de firmware temporales
+aic_load_fw.bin
