@@ -1,0 +1,1 @@
+savedcmd_/home/elwichita94/aic8800_build/aic8800/aic_load_fw/aic_load_fw.o := ld -m elf_x86_64 -z noexecstack --no-warn-rwx-segments   -r -o /home/elwichita94/aic8800_build/aic8800/aic_load_fw/aic_load_fw.o @/home/elwichita94/aic8800_build/aic8800/aic_load_fw/aic_load_fw.mod 

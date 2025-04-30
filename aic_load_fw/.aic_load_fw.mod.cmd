@@ -1,0 +1,1 @@
+savedcmd_/home/elwichita94/aic8800_build/aic8800/aic_load_fw/aic_load_fw.mod := printf '%s\n'   aic_bluetooth_main.o aicbluetooth.o aicwf_usb.o aic_txrxif.o aicbluetooth_cmds.o md5.o aicwf_txq_prealloc.o | awk '!x[$$0]++ { print("/home/elwichita94/aic8800_build/aic8800/aic_load_fw/"$$0) }' > /home/elwichita94/aic8800_build/aic8800/aic_load_fw/aic_load_fw.mod

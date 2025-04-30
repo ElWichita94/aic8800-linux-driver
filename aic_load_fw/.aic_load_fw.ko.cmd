@@ -1,0 +1,1 @@
+savedcmd_/home/elwichita94/aic8800_build/aic8800/aic_load_fw/aic_load_fw.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/elwichita94/aic8800_build/aic8800/aic_load_fw/aic_load_fw.ko /home/elwichita94/aic8800_build/aic8800/aic_load_fw/aic_load_fw.o /home/elwichita94/aic8800_build/aic8800/aic_load_fw/aic_load_fw.mod.o

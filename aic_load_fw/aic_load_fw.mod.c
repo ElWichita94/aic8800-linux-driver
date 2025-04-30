@@ -1,0 +1,223 @@
+#include <linux/module.h>
+#define INCLUDE_VERMAGIC
+#include <linux/build-salt.h>
+#include <linux/elfnote-lto.h>
+#include <linux/export-internal.h>
+#include <linux/vermagic.h>
+#include <linux/compiler.h>
+
+#ifdef CONFIG_UNWINDER_ORC
+#include <asm/orc_header.h>
+ORC_HEADER;
+#endif
+
+BUILD_SALT;
+BUILD_LTO_INFO;
+
+MODULE_INFO(vermagic, VERMAGIC_STRING);
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__section(".gnu.linkonce.this_module") = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+#ifdef CONFIG_RETPOLINE
+MODULE_INFO(retpoline, "Y");
+#endif
+
+KSYMTAB_FUNC(get_fw_path, "", "");
+KSYMTAB_FUNC(get_testmode, "", "");
+KSYMTAB_FUNC(set_testmode, "", "");
+KSYMTAB_FUNC(get_hardware_info, "", "");
+KSYMTAB_FUNC(get_userconfig_xtal_cap, "", "");
+KSYMTAB_FUNC(get_userconfig_txpwr_idx, "", "");
+KSYMTAB_FUNC(get_userconfig_txpwr_ofst, "", "");
+KSYMTAB_FUNC(aicwf_prealloc_txq_alloc, "", "");
+
+SYMBOL_CRC(get_fw_path, 0x2986c864, "");
+SYMBOL_CRC(get_testmode, 0x3a13f8bb, "");
+SYMBOL_CRC(set_testmode, 0x81d11f06, "");
+SYMBOL_CRC(get_hardware_info, 0xef93fea4, "");
+SYMBOL_CRC(get_userconfig_xtal_cap, 0x12789d30, "");
+SYMBOL_CRC(get_userconfig_txpwr_idx, 0x27e5f257, "");
+SYMBOL_CRC(get_userconfig_txpwr_ofst, 0x377c82c7, "");
+SYMBOL_CRC(aicwf_prealloc_txq_alloc, 0x6f8e754f, "");
+
+static const char ____versions[]
+__used __section("__versions") =
+	"\x14\x00\x00\x00\x6f\x13\x07\x4d"
+	"filp_open\0\0\0"
+	"\x18\x00\x00\x00\x0e\x95\xb5\x86"
+	"usb_alloc_urb\0\0\0"
+	"\x18\x00\x00\x00\x15\x3e\xac\x01"
+	"usb_anchor_urb\0\0"
+	"\x18\x00\x00\x00\xc7\xf3\xd1\x9a"
+	"usb_free_urb\0\0\0\0"
+	"\x10\x00\x00\x00\x1a\x7e\xab\x20"
+	"skb_put\0"
+	"\x1c\x00\x00\x00\x8f\x18\x02\x7f"
+	"__msecs_to_jiffies\0\0"
+	"\x14\x00\x00\x00\xd0\x39\x3c\x5b"
+	"consume_skb\0"
+	"\x14\x00\x00\x00\x6e\x4a\x6e\x65"
+	"snprintf\0\0\0\0"
+	"\x14\x00\x00\x00\x2f\x7a\x25\xa6"
+	"complete\0\0\0\0"
+	"\x18\x00\x00\x00\x36\xf2\xb6\xc5"
+	"queue_work_on\0\0\0"
+	"\x20\x00\x00\x00\xb5\x41\x87\x60"
+	"__init_swait_queue_head\0"
+	"\x14\x00\x00\x00\xbf\x0f\x54\x92"
+	"finish_wait\0"
+	"\x1c\x00\x00\x00\xba\xd8\x4e\x3d"
+	"usb_register_driver\0"
+	"\x24\x00\x00\x00\x6f\x6f\x23\x4c"
+	"__x86_indirect_thunk_r15\0\0\0\0"
+	"\x1c\x00\x00\x00\xf1\xaa\xf1\x6d"
+	"kernel_sigaction\0\0\0\0"
+	"\x10\x00\x00\x00\x38\xdf\xac\x69"
+	"memcpy\0\0"
+	"\x10\x00\x00\x00\xba\x0c\x7a\x03"
+	"kfree\0\0\0"
+	"\x14\x00\x00\x00\x52\x1b\x49\xe2"
+	"pcpu_hot\0\0\0\0"
+	"\x20\x00\x00\x00\x95\xd4\x26\x8c"
+	"prepare_to_wait_event\0\0\0"
+	"\x1c\x00\x00\x00\x6e\x64\xf7\xb3"
+	"kthread_should_stop\0"
+	"\x14\x00\x00\x00\x44\x43\x96\xe2"
+	"__wake_up\0\0\0"
+	"\x20\x00\x00\x00\x0b\x05\xdb\x34"
+	"_raw_spin_lock_irqsave\0\0"
+	"\x18\x00\x00\x00\x64\xbd\x8f\xba"
+	"_raw_spin_lock\0\0"
+	"\x18\x00\x00\x00\x8c\x89\xd4\xcb"
+	"fortify_panic\0\0\0"
+	"\x14\x00\x00\x00\xbb\x6d\xfb\xbd"
+	"__fentry__\0\0"
+	"\x18\x00\x00\x00\xd2\xf0\xf2\x97"
+	"wake_up_process\0"
+	"\x24\x00\x00\x00\x97\x70\x48\x65"
+	"__x86_indirect_thunk_rax\0\0\0\0"
+	"\x10\x00\x00\x00\x7e\x3a\x2c\x12"
+	"_printk\0"
+	"\x1c\x00\x00\x00\xad\x8a\xdd\x8d"
+	"schedule_timeout\0\0\0\0"
+	"\x14\x00\x00\x00\x51\x0e\x00\x01"
+	"schedule\0\0\0\0"
+	"\x1c\x00\x00\x00\xcb\xf6\xfd\xf0"
+	"__stack_chk_fail\0\0\0\0"
+	"\x1c\x00\x00\x00\xca\x21\x60\xe4"
+	"_raw_spin_unlock_bh\0"
+	"\x20\x00\x00\x00\xe1\x8a\x2c\x96"
+	"usb_kill_anchored_urbs\0\0"
+	"\x10\x00\x00\x00\x94\xb6\x16\xa9"
+	"strnlen\0"
+	"\x1c\x00\x00\x00\xdc\xf9\x2e\xa2"
+	"kmem_cache_alloc\0\0\0\0"
+	"\x18\x00\x00\x00\xb0\x70\x10\xbc"
+	"usb_submit_urb\0\0"
+	"\x28\x00\x00\x00\xb3\x1c\xa2\x87"
+	"__ubsan_handle_out_of_bounds\0\0\0\0"
+	"\x18\x00\x00\x00\x75\x79\x48\xfe"
+	"init_wait_entry\0"
+	"\x14\x00\x00\x00\x53\x53\x30\xbb"
+	"skb_pull\0\0\0\0"
+	"\x1c\x00\x00\x00\x63\xa5\x03\x4c"
+	"random_kmalloc_seed\0"
+	"\x18\x00\x00\x00\xf1\x0d\xe0\x4c"
+	"kmem_cache_free\0"
+	"\x24\x00\x00\x00\xe9\xc8\x79\x1a"
+	"__x86_indirect_thunk_r13\0\0\0\0"
+	"\x2c\x00\x00\x00\xe2\xcc\x3b\x2e"
+	"wait_for_completion_interruptible\0\0\0"
+	"\x18\x00\x00\x00\xed\xb3\x52\xd8"
+	"kthread_stop\0\0\0\0"
+	"\x18\x00\x00\x00\x25\x87\x4f\x90"
+	"usb_deregister\0\0"
+	"\x24\x00\x00\x00\x70\xce\x5c\xd3"
+	"_raw_spin_unlock_irqrestore\0"
+	"\x10\x00\x00\x00\xc5\x8f\x57\xfb"
+	"memset\0\0"
+	"\x14\x00\x00\x00\x5f\x3c\x37\x38"
+	"kernel_read\0"
+	"\x1c\x00\x00\x00\xdf\xdb\x79\x38"
+	"skb_dequeue_tail\0\0\0\0"
+	"\x1c\x00\x00\x00\xca\x39\x82\x5b"
+	"__x86_return_thunk\0\0"
+	"\x20\x00\x00\x00\x54\xea\xa5\xd9"
+	"__init_waitqueue_head\0\0\0"
+	"\x1c\x00\x00\x00\xa5\xd7\xfc\xfb"
+	"__netdev_alloc_skb\0\0"
+	"\x18\x00\x00\x00\x8c\xdd\xd6\x93"
+	"complete_all\0\0\0\0"
+	"\x1c\x00\x00\x00\x92\x17\xf2\x34"
+	"usb_unanchor_urb\0\0\0\0"
+	"\x1c\x00\x00\x00\x10\x96\xfa\x3b"
+	"param_ops_string\0\0\0\0"
+	"\x10\x00\x00\x00\x5a\x25\xd5\xe2"
+	"strcmp\0\0"
+	"\x14\x00\x00\x00\xd5\x48\xea\x3f"
+	"skb_unlink\0\0"
+	"\x20\x00\x00\x00\xb0\x1a\xa8\xfb"
+	"kthread_create_on_node\0\0"
+	"\x10\x00\x00\x00\x97\x82\x9e\x99"
+	"vfree\0\0\0"
+	"\x18\x00\x00\x00\x16\xbe\x96\x30"
+	"names_cachep\0\0\0\0"
+	"\x18\x00\x00\x00\xd6\xdf\xe3\xea"
+	"__const_udelay\0\0"
+	"\x30\x00\x00\x00\xc7\xc3\x6b\x72"
+	"wait_for_completion_killable_timeout\0\0\0\0"
+	"\x14\x00\x00\x00\x44\x7d\x2d\x79"
+	"filp_close\0\0"
+	"\x18\x00\x00\x00\x86\x4f\x51\xbd"
+	"usb_kill_urb\0\0\0\0"
+	"\x1c\x00\x00\x00\xfe\x2d\xc1\x03"
+	"cancel_work_sync\0\0\0\0"
+	"\x18\x00\x00\x00\x18\x01\x47\x56"
+	"__warn_printk\0\0\0"
+	"\x1c\x00\x00\x00\xfc\x90\x36\x0c"
+	"_raw_spin_lock_bh\0\0\0"
+	"\x14\x00\x00\x00\x63\xf9\xd4\xb7"
+	"send_sig\0\0\0\0"
+	"\x18\x00\x00\x00\x1a\x3f\x1d\xfe"
+	"kmalloc_trace\0\0\0"
+	"\x2c\x00\x00\x00\xc6\xfa\xb1\x54"
+	"__ubsan_handle_load_invalid_value\0\0\0"
+	"\x10\x00\x00\x00\x9c\x53\x4d\x75"
+	"strlen\0\0"
+	"\x24\x00\x00\x00\xe8\x2b\x22\x36"
+	"dev_kfree_skb_any_reason\0\0\0\0"
+	"\x18\x00\x00\x00\xd9\x05\x9f\xc5"
+	"param_ops_int\0\0\0"
+	"\x10\x00\x00\x00\x8f\x68\xee\xd6"
+	"vmalloc\0"
+	"\x1c\x00\x00\x00\x34\x4b\xb5\xb5"
+	"_raw_spin_unlock\0\0\0\0"
+	"\x10\x00\x00\x00\xf9\x82\xa4\xf9"
+	"msleep\0\0"
+	"\x14\x00\x00\x00\x45\x3a\x23\xeb"
+	"__kmalloc\0\0\0"
+	"\x20\x00\x00\x00\x5d\x7b\xc1\xe2"
+	"__SCT__might_resched\0\0\0\0"
+	"\x18\x00\x00\x00\x57\x21\x74\xcb"
+	"kmalloc_caches\0\0"
+	"\x14\x00\x00\x00\xd3\x85\x33\x2d"
+	"system_wq\0\0\0"
+	"\x18\x00\x00\x00\x41\x40\xb4\x0e"
+	"module_layout\0\0\0"
+	"\x00\x00\x00\x00\x00\x00\x00\x00";
+
+MODULE_INFO(depends, "");
+
+MODULE_ALIAS("usb:vA69Cp8800d*dc*dsc*dp*ic*isc*ip*in*");
+MODULE_ALIAS("usb:vA69Cp8801d*dc*dsc*dp*ic*isc*ip*in*");
+
+MODULE_INFO(srcversion, "E3110A3EB57BD17E0A1DAC3");
